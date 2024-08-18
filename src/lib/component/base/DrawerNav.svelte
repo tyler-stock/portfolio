@@ -30,7 +30,7 @@
                     </p>
                 </div>
                 <div class="{$isPinned ? '' : 'hidden group-hover:block'}">
-                    <button on:click={togglePin} class="flex p-2 px-[9px] rounded-lg hover:bg-white dark:hover:bg-[#212121] text-primary-800 dark:text-white/80 duration-200">
+                    <button on:click={togglePin} class="flex p-2 px-[9px] rounded-lg hover:bg-white dark:hover:bg-[#212121] text-primary-800 dark:text-white/80 duration-100">
                         <i class="material-symbols-rounded text-[24px] relative">
                             dock_to_right
                             {#if $isPinned}
@@ -48,7 +48,7 @@
             {#each buttons as button}
                 <a href={button.href} class="flex items-center rounded-lg p-2 gap-3 hover:bg-white dark:hover:bg-[#212121] group-hover:w-full text-primary-800 dark:text-white/80 duration-200 select-none">
                     <i class="material-symbols-rounded text-[24px]">{button.icon}</i>
-                    <span class="text-sm {$isPinned ? '' : 'hidden group-hover:block'}">{button.label}</span>
+                    <span class="text-sm font-[500] {$isPinned ? '' : 'hidden group-hover:block'}">{button.label}</span>
                 </a>
             {/each}
         </div>

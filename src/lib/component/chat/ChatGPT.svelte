@@ -130,6 +130,7 @@
             on:sendMessage={sendMessage}
         />
     </div>
+    
 </div>
 
 <style>
