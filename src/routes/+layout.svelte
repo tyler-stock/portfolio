@@ -23,7 +23,7 @@
 
 <div class="h-screen flex">
     <DrawerNav />
-    <div class="h-full w-full dark:bg-[#212121] duration-300">
+    <div class="h-full w-full bg-primary-50 dark:bg-[#212121] duration-300">
         <slot />
     </div>
 </div>

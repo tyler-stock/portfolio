@@ -6,7 +6,7 @@
         isDark.update(n => !n)
     }
 
-    const isPinned = writable(true)
+    const isPinned = writable(false)
 
     function togglePin() {
         isPinned.update(pinned => !pinned)
@@ -14,22 +14,21 @@
 
     const buttons = [
         { href: "/", icon: "home", label: "Home" },
-        { href: "/", icon: "circle", label: "Test" },
-        { href: "/app/component", icon: "extension", label: "Components" },
+        // { href: "/app/component", icon: "extension", label: "Components" },
         { href: "/app/chat", icon: "robot_2", label: "AI Chat" }
     ]
 </script>
 
-<aside class="group flex flex-col justify-between {$isDark ? 'bg-[#171717]' : 'bg-primary-100 '} overflow-hidden whitespace-nowrap p-4 duration-300 {($isPinned ? 'w-[325px]' : 'w-[72px] hover:w-[325px]')}">
+<aside class="group flex flex-col justify-between {$isDark ? 'bg-[#171717]' : 'bg-primary-100 '} overflow-hidden whitespace-nowrap px-4 duration-300 {($isPinned ? 'w-[325px]' : 'w-[72px] hover:w-[325px]')}">
     <div class="flex flex-col gap-4">
-        <div class="w-full flex justify-between border-b border-primary-200 dark:border-neutral-600 pb-[12.5px]">
-            <div class="w-[80%] flex items-center justify-start p-2 rounded-lg text-primary-800 dark:text-white/80 duration-200">
-                <i class="material-symbols-rounded text-[24px] {$isPinned ? 'hidden' : 'group-hover:hidden'}">title</i>
-                <p class="whitespace-nowrap overflow-hidden text-left font-[700] {($isPinned ? '' : 'w-0 group-hover:w-auto')}">
-                    Tyler Stock
-                </p>
-            </div>
-            <div>
+        <div class="">
+            <div class="h-20 w-full flex items-center justify-between border-b border-primary-200 dark:border-neutral-600 duration-300">
+                <div class="w-[80%] flex items-center justify-start p-2 rounded-lg text-primary-800 dark:text-white/80 duration-200 select-none">
+                    <p class="material-symbols-rounded text-[24px]">title</p>
+                    <p class="whitespace-nowrap overflow-hidden text-left font-[700] text-[19px] tracking-wide -ml-[5px] {($isPinned ? '' : 'w-0 group-hover:w-auto')}">
+                        yler Stock
+                    </p>
+                </div>
                 <div class="{$isPinned ? '' : 'hidden group-hover:block'}">
                     <button on:click={togglePin} class="flex p-2 px-[9px] rounded-lg hover:bg-white dark:hover:bg-[#212121] text-primary-800 dark:text-white/80 duration-200">
                         <i class="material-symbols-rounded text-[24px] relative">
@@ -54,7 +53,7 @@
             {/each}
         </div>
     </div>
-    <div class="w-full flex justify-between">
+    <div class="w-full flex justify-between pb-4">
         <button class="w-[80%] flex items-center justify-start p-2 rounded-lg hover:bg-white dark:hover:bg-[#212121] text-primary-800 dark:text-white/80 duration-200">
             <i class="material-symbols-rounded text-[24px]">person</i>
             <p class="text-sm text-left {($isPinned ? 'overflow-visible pl-2' : 'w-0 overflow-hidden group-hover:w-full group-hover:pr-3 group-hover:pl-2 group-hover:truncate group-hover:overflow-visible')}">Tyler Stock</p>

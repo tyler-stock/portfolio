@@ -24,15 +24,15 @@
         type="text"
         bind:value={inputMessage}
         placeholder="Send a Message to GPT-4o..."
-        class="flex-grow px-5 py-4 placeholder-primary-300 dark:placeholder-white/80 dark:text-white/80 focus:ring-0 border-none dark:bg-[#2f2f2f]  duration-300"
+        class="flex-grow px-5 py-4 placeholder-primary-300 dark:placeholder-white/80 dark:text-white/80 focus:ring-0 border-none dark:bg-[#2f2f2f] duration-300"
         on:keydown={handleKeydown}
     />
     <button
         on:click={handleClick}
-        class="absolute right-3 p-[2px] text-white rounded-lg duration-300 {inputMessage.length ? 'bg-primary-800 dark:bg-white/80 ' : 'bg-primary-100 dark:bg-[#676767]'} disabled:opacity-50"
+        class="absolute right-3 p-[2px] text-white rounded-lg duration-300 {inputMessage.length ? 'bg-neutral-700 dark:bg-white/80 ' : 'bg-primary-100 dark:bg-[#676767]'} disabled:opacity-50"
         disabled={$isLoading}
     >
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" class="{inputMessage.length ? "text-primary-800" : "text-[#2f2f2f]"} duration-300" viewBox="0 0 32 32">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" class="text-white dark:text-[#212121] duration-300" viewBox="0 0 32 32">
             <path fill="currentColor" fill-rule="evenodd" d="M15.192 8.906a1.143 1.143 0 0 1 1.616 0l5.143 5.143a1.143 1.143 0 0 1-1.616 1.616l-3.192-3.192v9.813a1.143 1.143 0 0 1-2.286 0v-9.813l-3.192 3.192a1.143 1.143 0 1 1-1.616-1.616z" clip-rule="evenodd"></path>
         </svg>
     </button>
