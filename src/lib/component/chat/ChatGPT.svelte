@@ -45,6 +45,9 @@
                 ...msgs,
                 { role: 'assistant', content: get(currentAssistantMessage) } as ChatMessage,
             ])
+
+            console.log('Output:', get(currentAssistantMessage))
+
         } catch (error) {
             console.error('Error communicating with OpenAI:', error)
         } finally {

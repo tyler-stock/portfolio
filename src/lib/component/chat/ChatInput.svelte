@@ -11,6 +11,7 @@
         if (event.key === 'Enter' && !event.shiftKey) {
             event.preventDefault()
             dispatch('sendMessage')
+            console.log('Input:', inputMessage)
         }
     }
 
