@@ -17,9 +17,9 @@
             ChatGPT 4o
         </p>
         <div class="flex justify-center items-center gap-4 pr-2">
-            <button class="flex justify-center items-center px-4 py-2 gap-[10px] duration-100 rounded-lg text-primary-800 bg-[#2f2f2f] hover:bg-primary-50 dark:hover:bg-[#2f2f2f] dark:text-white/80 active:text-indigo-500 dark:active:text-indigo-500" on:click={chatReset}>
+            <button class="flex justify-center items-center px-4 py-2 gap-[10px] duration-100 rounded-lg text-primary-800 bg-primary-100 dark:bg-[#2f2f2f] dark:text-white/80 active:text-indigo-500 dark:active:text-indigo-500" on:click={chatReset}>
                 <span class="material-symbols-rounded text-[18px]">sms</span>
-                <p class="whitespace-nowrap pb-[1px]">New Chat</p>
+                <p class="whitespace-nowrap pb-[1px] font-[500]">New Chat</p>
             </button>
         </div>
     </div>

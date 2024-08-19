@@ -20,6 +20,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@google-cloud/vertexai": "^1.4.1",
 		"@sveltejs/adapter-vercel": "^5.4.3",
 		"@tailwindcss/forms": "^0.5.7",
 		"@tailwindcss/typography": "^0.5.14",

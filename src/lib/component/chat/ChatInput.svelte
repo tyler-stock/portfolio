@@ -24,7 +24,7 @@
         type="text"
         bind:value={inputMessage}
         placeholder="Send a Message to GPT-4o..."
-        class="flex-grow px-5 py-4 placeholder-primary-300 dark:placeholder-white/80 dark:text-white/80 focus:ring-0 border-none dark:bg-[#2f2f2f] duration-300"
+        class="flex-grow px-5 py-4 bg-primary-50 placeholder-primary-300 dark:placeholder-white/80 dark:text-white/80 focus:ring-0 border-none dark:bg-[#2f2f2f] duration-300"
         on:keydown={handleKeydown}
     />
     <button

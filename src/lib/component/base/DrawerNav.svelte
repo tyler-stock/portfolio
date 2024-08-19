@@ -17,6 +17,7 @@
         // { href: "/app/component", icon: "extension", label: "Components" },
         { href: "/app/chat", icon: "robot_2", label: "AI Chat" }
     ]
+    
 </script>
 
 <aside class="group flex flex-col justify-between {$isDark ? 'bg-[#171717]' : 'bg-primary-100 '} overflow-hidden whitespace-nowrap px-4 duration-300 {($isPinned ? 'w-[325px]' : 'w-[72px] hover:w-[325px]')}">
@@ -53,7 +54,7 @@
             {/each}
         </div>
     </div>
-    <div class="w-full flex justify-between pb-4">
+    <div class="w-full flex justify-between pb-6">
         <button class="w-[80%] flex items-center justify-start p-2 rounded-lg hover:bg-white dark:hover:bg-[#212121] text-primary-800 dark:text-white/80 duration-200">
             <i class="material-symbols-rounded text-[24px]">person</i>
             <p class="text-sm text-left {($isPinned ? 'overflow-visible pl-2' : 'w-0 overflow-hidden group-hover:w-full group-hover:pr-3 group-hover:pl-2 group-hover:truncate group-hover:overflow-visible')}">Tyler Stock</p>
