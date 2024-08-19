@@ -18,20 +18,19 @@
     </div>
 </div>
 
-<div class="flex flex-col px-10 py-8 gap-12 text-primary-900 dark:text-white/80">
+<div class="flex flex-col px-10 py-8 gap-6 text-primary-900 dark:text-white/80">
     <div class="flex items-center justify-between">
         <div class="flex flex-col gap-4">
             <span class="flex items-center gap-4">
                 <p class="text-4xl font-[700]">Welcome to Tyler Stock's Portfolio!</p>
-                <i class="material-symbols-rounded">sentiment_satisfied</i>
+                <i class="material-symbols-rounded hover:text-indigo-500 dark:hover:text-indigo-500 hover:animate-spin select-none">sentiment_satisfied</i>
             </span>
-            <p class="text-2xl font-[400] pl-1">This is an enviorment to showcase Full-Stack Developer capabilities</p>
         </div>
         
     </div>
 
     <div class="flex flex-col gap-4">
-        <span class="flex items-center gap-2">
+        <span class="flex items-center gap-2 select-none">
             <i class="material-symbols-rounded">handyman</i>
             <p class="">In Progress...</p>
         </span>
