@@ -24,16 +24,15 @@
     }
 
     async function sendMessage() {
-        if (inputMessage.trim() === '') return
+        if (inputMessage.trim() === '' || get(isLoading)) return
 
         abortController?.abort()
-        
+
         abortController = new AbortController()
 
-        messages.update((msgs) => [
-            ...msgs,
-            { role: 'user', content: inputMessage } as ChatMessage,
-        ])
+        const newMessage: ChatMessage = { role: 'user', content: inputMessage }
+
+        messages.update((msgs) => [...msgs, newMessage])
 
         inputMessage = ''
         isLoading.set(true)
@@ -52,12 +51,14 @@
                 abortController.signal
             )
 
-            messages.update((msgs) => [
-                ...msgs,
-                { role: 'assistant', content: get(currentAssistantMessage) } as ChatMessage,
-            ])
+            const assistantMessage: ChatMessage = { role: 'assistant', content: get(currentAssistantMessage) }
 
-            console.log('Output:', get(currentAssistantMessage))
+            if (get(messages).some(msg => msg.content === assistantMessage.content && msg.role === 'assistant')) {
+                console.log('Duplicate message detected, not adding again.')
+            } else {
+                messages.update((msgs) => [...msgs, assistantMessage])
+                console.log('Output:', assistantMessage.content)
+            }
 
         } catch (error) {
             if (error instanceof Error) {
@@ -69,8 +70,11 @@
             } else {
                 console.error('An unexpected error occurred:', error)
             }
+        } finally {
+            isLoading.set(false)
         }
     }
+
 
     function resetChat() {
         abortController?.abort()
