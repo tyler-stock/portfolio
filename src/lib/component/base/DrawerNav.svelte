@@ -14,7 +14,7 @@
 
     const buttons = [
         { href: "/", icon: "home", label: "Home" },
-        // { href: "/app/component", icon: "extension", label: "Components" },
+        { href: "/app/component", icon: "extension", label: "Components" },
         { href: "/app/chat", icon: "robot_2", label: "AI Chat" }
     ]
     
