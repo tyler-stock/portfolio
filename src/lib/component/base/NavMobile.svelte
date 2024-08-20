@@ -22,13 +22,13 @@
 <div class="group h-full w-full flex items-center justify-between px-6 {$isDark ? 'bg-[#171717]' : 'bg-primary-100 '} overflow-hidden whitespace-nowrap px-4 duration-300">
     <div class="w-full flex items-center justify-between">
         <div class="flex items-center justify-start p-2 rounded-lg text-primary-800 dark:text-white/80 duration-200 select-none">
-            <p class="whitespace-nowrap overflow-hidden text-left font-[700] text-2xl tracking-wide -ml-[5px]">
+            <p class="whitespace-nowrap overflow-hidden text-left font-[700] text-xl tracking-wide -ml-[5px]">
                 Tyler Stock
             </p>
         </div>
     </div>
     <div class="flex gap-12">
-        <div class="flex items-center gap-4">
+        <div class="flex items-center gap-2">
             {#each buttons as button}
                 <a href={button.href} class="h-10 w-10 flex items-center justify-center rounded-lg bg-primary-200/50 dark:bg-[#212121] text-primary-800 dark:text-white/80 hover:text-indigo-500 dark:hover:text-indigo-500 duration-200 select-none">
                     <i class="material-symbols-rounded text-[24px]">{button.icon}</i>
@@ -40,7 +40,7 @@
                 </button>
             {/if}
         </div>
-        <div class="flex items-center gap-4">
+        <div class="flex items-center gap-2">
             <button on:click={toggleTheme} class="h-10 w-10 flex items-center justify-center rounded-lg bg-primary-200/50 dark:bg-[#212121] text-primary-800 dark:text-white/80 hover:text-indigo-500 dark:hover:text-indigo-500 duration-200 select-none">
                 <i class="material-symbols-rounded text-[24px]">{$isDark ? 'dark_mode' : 'light_mode'}</i>
             </button>
