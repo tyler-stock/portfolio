@@ -1,10 +1,9 @@
 <script lang="ts">
-    import { createEventDispatcher } from 'svelte'
+    import { resetChatTrigger } from '$lib/store/reset'
 
-    const dispatch = createEventDispatcher()
-
-    function chatReset() { dispatch('reset') }
-    // function chatHistory() { dispatch('history') }
+    function resetChat() {
+        resetChatTrigger.set(true)
+    }
 
 </script>
 
@@ -17,8 +16,8 @@
             ChatGPT 4o
         </p>
         <div class="flex justify-center items-center gap-4 pr-2">
-            <button class="flex justify-center items-center px-4 py-2 gap-[10px] duration-300 rounded-lg text-primary-800 bg-primary-100 dark:bg-[#2f2f2f] dark:text-white/80 active:duration-100 active:text-indigo-500 dark:active:text-indigo-500" on:click={chatReset}>
-                <span class="material-symbols-rounded text-[18px]">sms</span>
+            <button on:click={resetChat} class="flex justify-center items-center px-4 py-2 gap-[10px] rounded-lg bg-primary-200/50 dark:bg-[#2f2f2f] text-primary-800 dark:text-white/80 hover:text-indigo-500 dark:hover:text-indigo-500 duration-200" >
+                <span class="material-symbols-rounded text-[18px]">forum</span>
                 <p class="whitespace-nowrap pb-[1px] font-[500]">New Chat</p>
             </button>
         </div>

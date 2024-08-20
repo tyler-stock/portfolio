@@ -1,8 +1,11 @@
 <script lang="ts">
-    import "../app.css"
-    import DrawerNav from "$lib/component/base/DrawerNav.svelte"
-    import { isDark } from "$lib/store/theme"
+    import "../app.css";
     import { onMount } from 'svelte'
+    import { isDark } from "$lib/store/theme"
+    import { isMobile } from "$lib/store/device"
+    import NavDesktop from "$lib/component/base/NavDesktop.svelte"
+    import NavMobile from "$lib/component/base/NavMobile.svelte"
+
     import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit'
     import { inject } from '@vercel/analytics'
 
@@ -21,9 +24,16 @@
 
 </script>
 
-<div class="h-screen flex">
-    <DrawerNav />
-    <div class="h-full w-full bg-primary-50 dark:bg-[#212121] duration-300">
+<div class="{$isMobile ? 'h-screen w-screen flex flex-col relative' : 'h-screen flex'}">
+    {#if !$isMobile}
+        <NavDesktop />
+    {/if}
+    {#if $isMobile}
+    <div class="h-24">
+        <NavMobile  />
+    </div>
+    {/if}
+    <div class="h-full w-full bg-primary-50 dark:bg-[#212121] duration-300 overflow-hidden">
         <slot />
     </div>
 </div>
