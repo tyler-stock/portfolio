@@ -35,7 +35,7 @@
                         <i class="material-symbols-rounded text-[24px] relative">
                             dock_to_right
                             {#if $isPinned}
-                                <svg width="20px" height="20px" viewBox="0 0 20 20"  class="absolute right-[2px] top-[2px] bottom-0 rotate-180 fill-none dark:fill-none stroke-primary-800 dark:stroke-white/80">
+                                <svg width="20px" height="20px" viewBox="0 0 20 20"  class="absolute left-[2.5px] top-[2px] bottom-0 rotate-180 fill-none dark:fill-none stroke-primary-800 dark:stroke-white/80">
                                     <path d="M6.66666 7.5L9.16666 10L6.66666 12.5" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="transition: 0.4s;"></path>
                                 </svg>
                             {/if}

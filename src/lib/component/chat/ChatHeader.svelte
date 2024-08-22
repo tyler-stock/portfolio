@@ -18,7 +18,7 @@
         <div class="flex justify-center items-center gap-4 pr-2">
             <button on:click={resetChat} class="flex justify-center items-center px-4 py-2 gap-[10px] rounded-lg bg-primary-200/50 dark:bg-[#2f2f2f] text-primary-800 dark:text-white/80 hover:text-indigo-500 dark:hover:text-indigo-500 duration-200" >
                 <span class="material-symbols-rounded text-[18px]">forum</span>
-                <p class="whitespace-nowrap pb-[1px] font-[500]">New Chat</p>
+                <p class="whitespace-nowrap pb-[1px] font-[400]">New Chat</p>
             </button>
         </div>
     </div>

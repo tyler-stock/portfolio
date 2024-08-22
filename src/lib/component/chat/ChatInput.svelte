@@ -30,7 +30,7 @@
     />
     <button
         on:click={handleClick}
-        class="absolute right-3 p-[2px] text-white rounded-lg duration-300 {inputMessage.length ? 'bg-neutral-700 dark:bg-white/80 ' : 'bg-primary-100 dark:bg-[#676767]'} disabled:opacity-50"
+        class="absolute right-3 p-[2px] text-white rounded-lg duration-300 {inputMessage.length ? 'bg-neutral-700 dark:bg-white/80 ' : 'bg-primary-100 dark:bg-[#444]'} disabled:opacity-50"
         disabled={$isLoading}
     >
         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" class="text-white dark:text-[#212121] duration-300" viewBox="0 0 32 32">
