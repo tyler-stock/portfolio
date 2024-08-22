@@ -29,7 +29,7 @@
         <NavDesktop />
     {/if}
     {#if $isMobile}
-    <div class="h-24">
+    <div class="h-20">
         <NavMobile  />
     </div>
     {/if}
