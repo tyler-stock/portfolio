@@ -21,7 +21,7 @@
 
 <div class="group h-full w-full flex items-center justify-between {$isDark ? 'bg-[#171717]' : 'bg-primary-100 '} overflow-hidden whitespace-nowrap px-4 duration-300">
     <div class="w-full flex items-center justify-between">
-        <div class="flex items-center justify-start py-2 rounded-lg text-primary-800 dark:text-white/80 duration-300 select-none">
+        <div class="flex items-center justify-start py-2 pl-1 rounded-lg text-primary-800 dark:text-white/80 duration-300 select-none">
             <p class="whitespace-nowrap overflow-hidden text-left font-[700] text-lg tracking-wide -ml-[5px]">
                 Tyler Stock
             </p>
