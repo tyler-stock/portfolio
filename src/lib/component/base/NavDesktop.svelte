@@ -25,8 +25,8 @@
         <div class="">
             <div class="h-20 w-full flex items-center justify-between border-b border-primary-200 dark:border-neutral-600 duration-300">
                 <div class="w-[80%] flex items-center justify-start p-2 rounded-lg text-primary-800 dark:text-white/80 duration-200 select-none">
-                    <p class="material-symbols-rounded text-[24px] duration-300 group-hover:w-0 group-hover:overflow-hidden">title</p>
-                    <p class="whitespace-nowrap overflow-hidden text-left font-[700] text-lg tracking-wide  {($isPinned ? '' : 'w-0 group-hover:w-auto')}">
+                    <p class="material-symbols-rounded text-[24px] duration-300 group-hover:w-0 group-hover:overflow-hidden {$isPinned ? 'hidden' : ''}">title</p>
+                    <p class="whitespace-nowrap overflow-hidden text-left font-[700] text-lg tracking-wide  {$isPinned ? '' : 'w-0 group-hover:w-auto'}">
                         Tyler Stock
                     </p>
                 </div>
