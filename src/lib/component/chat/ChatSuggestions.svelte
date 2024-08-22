@@ -16,9 +16,9 @@
 <div class="grid grid-cols-2 gap-4 select-none">
     {#each suggestions as { icon, text, color }}
         <button class="flex border border-primary-200 dark:border-[#444] text-primary-500 dark:text-white/50 hover:bg-primary-100/25 hover:border-primary-300/75 dark:hover:bg-[#2f2f2f] text-sm text-left rounded-lg p-4 duration-100 whitespace-nowrap" on:click={() => onSelect(text)}>
-            <div class="flex items-start gap-3 pr-2">
+            <div class="w-full flex items-start gap-3 pr-2">
                 <i class="material-symbols-rounded text-[18px]" style="color: {color}">{icon}</i>
-                <div class="flex items-center text-sm -mt-[1px]">{text}</div>
+                <div class="w-full truncate flex items-center text-sm -mt-[1px]">{text}</div>
             </div>
         </button>
     {/each}
