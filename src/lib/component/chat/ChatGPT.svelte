@@ -81,7 +81,7 @@
         messages.set([
             {
                 role: 'assistant',
-                content: `Hey there! 👋 I'm Tyler's Large Language Model (LLM). If you have questions, need advice, or just want to chat I'm ready to assist.`
+                content: `Hey! 👋 I'm Tyler's AI. I'm ready to help if you have any questions, need advice, or just want to chat.`
             } as ChatMessage
         ])
         inputMessage = ''
@@ -154,10 +154,12 @@
     </div>
 
     <div class="flex flex-col px-8">
-        {#if $messages.length === 1 && $messages[0].role === 'assistant'}
-            <div class="py-8 flex self-center items-center">
-                <ChatSuggestions onSelect={suggestedMessage} />
-            </div>
+        {#if !$isMobile}
+            {#if $messages.length === 1 && $messages[0].role === 'assistant'}
+                <div class="py-8 flex self-center items-center">
+                    <ChatSuggestions onSelect={suggestedMessage} />
+                </div>
+            {/if}
         {/if}
         <ChatInput
             bind:inputMessage={inputMessage}

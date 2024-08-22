@@ -6,7 +6,7 @@
     const buttons = [
         { href: "/", icon: "home" },
         // { href: "/app/component", icon: "extension" },
-        { href: "/app/chat", icon: "robot_2"}
+        ...($page.url.pathname !== '/app/chat' ? [{ href: "/app/chat", icon: "robot_2" }] : [])
     ]
 
     function toggleTheme() {
@@ -27,7 +27,7 @@
             </p>
         </div>
     </div>
-    <div class="flex gap-12">
+    <div class="flex gap-2">
         <div class="flex items-center gap-2">
             {#each buttons as button}
                 <a href={button.href} class="h-10 w-10 flex items-center justify-center rounded-lg bg-primary-200/50 dark:bg-[#212121] text-primary-800 dark:text-white/80 hover:text-indigo-500 dark:hover:text-indigo-500 duration-200 select-none">
